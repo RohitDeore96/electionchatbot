@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Election Assistant</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0d47a1">
+</head>
+<body>
+  <header>
+    <div class="logo">Election Assistant</div>
+    <nav>
+      <button onclick="router.navigate('home')">Home</button>
+      <button onclick="router.navigate('eligibility')">Eligibility</button>
+      <button onclick="router.navigate('checklist')">Checklist</button>
+    </nav>
+  </header>
+
+  <main id="app-content">
+    <!-- Dynamic content injected here by app.js -->
+  </main>
+
+  <!-- Template: Home -->
+  <template id="tmpl-home">
+    <section class="card">
+      <h1>Welcome</h1>
+      <p>Your offline-first guide to the election process. Select a tool above to begin.</p>
+    </section>
+  </template>
+
+  <!-- Template: Eligibility -->
+  <template id="tmpl-eligibility">
+    <section class="card">
+      <h2>Eligibility Checker</h2>
+      <form id="eligibility-form" onsubmit="event.preventDefault(); checkEligibility();">
+        <label>Age:
+          <input type="number" id="age" required min="1">
+        </label>
+        <label>Are you a citizen?
+          <select id="citizen" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+        <button type="submit" class="btn">Check Status</button>
+      </form>
+      <div id="eligibility-result" class="result-box" style="display: none;"></div>
+    </section>
+  </template>
+
+  <!-- Template: Checklist -->
+  <template id="tmpl-checklist">
+    <section class="card">
+      <h2>Document Checklist</h2>
+      <p>Your progress is saved locally on your device.</p>
+      <ul id="checklist-items" class="checklist"></ul>
+      <button onclick="resetChecklist()" class="btn btn-outline">Reset Checklist</button>
+    </section>
+  </template>
+
+  <script src="js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
+</body>
+</html>

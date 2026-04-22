@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import './styles/App.css';
 import Header from './components/Header';
-import ChatAssistant from './components/ChatAssistant';
 import Features from './components/Features';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('chat');
+  const [activeTab, setActiveTab] = useState('features');
 
   return (
     <div className="app-container">
@@ -19,26 +18,20 @@ function App() {
 
         <div className="content-tabs">
           <button 
-            className={`tab-btn ${activeTab === 'chat' ? 'active' : ''}`}
-            onClick={() => setActiveTab('chat')}
-          >
-            Ask Assistant
-          </button>
-          <button 
-            className={`tab-btn ${activeTab === 'features' ? 'active' : ''}`}
-            onClick={() => setActiveTab('features')}
+            className={`tab-btn active`}
           >
             Explore Tools
           </button>
         </div>
 
         <div className="tab-content glass-panel">
-          {activeTab === 'chat' ? <ChatAssistant /> : <Features />}
+          <Features />
         </div>
       </main>
       
       <footer className="app-footer">
         <p>Election Assistant is an informational tool and not affiliated with official government entities.</p>
+        <p><small>All data is processed locally. No external APIs used.</small></p>
       </footer>
     </div>
   );

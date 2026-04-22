@@ -1,0 +1,12 @@
+[
+  {
+    "id": "q1",
+    "question": "What kind of ID do I need to bring?",
+    "answer": "Depending on your location, you may need a valid government-issued photo ID like a driver's license or passport. Check local guidelines."
+  },
+  {
+    "id": "q2",
+    "question": "Can I vote by mail?",
+    "answer": "Yes, but you must request an absentee ballot before the deadline. Make sure to mail it back early or drop it off at an official secure drop box."
+  }
+]

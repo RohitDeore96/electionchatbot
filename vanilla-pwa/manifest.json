@@ -1,0 +1,9 @@
+{
+  "name": "Election Assistant",
+  "short_name": "ElectAssist",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d47a1",
+  "icons": []
+}

@@ -1,0 +1,6 @@
+{
+  "faqs": [
+    { "q": "How do I register to vote?", "a": "You must fill out Form 6 and submit it locally." },
+    { "q": "What ID is required?", "a": "Voter ID card or a recognized government photo ID." }
+  ]
+}

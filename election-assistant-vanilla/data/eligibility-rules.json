@@ -1,0 +1,5 @@
+{
+  "minAge": 18,
+  "citizenshipRequired": true,
+  "registrationRequired": true
+}

@@ -1,0 +1,20 @@
+[
+  { 
+    "id": "t1", 
+    "date": "2024-09-01", 
+    "event": "Voter Registration Deadline", 
+    "description": "Last day to register to vote in your state." 
+  },
+  { 
+    "id": "t2", 
+    "date": "2024-10-15", 
+    "event": "Early Voting Begins", 
+    "description": "Polling locations open for early in-person voting." 
+  },
+  { 
+    "id": "t3", 
+    "date": "2024-11-05", 
+    "event": "Election Day", 
+    "description": "Final day to cast your ballot. Polls close at 8 PM." 
+  }
+]

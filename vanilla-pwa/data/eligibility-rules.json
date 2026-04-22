@@ -1,0 +1,7 @@
+{
+  "default": {
+    "minAge": 18,
+    "citizenship": "required",
+    "registration": "required"
+  }
+}

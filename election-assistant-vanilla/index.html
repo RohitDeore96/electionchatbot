@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Offline-first Election Assistant to help you check eligibility and track documents.">
+  <title>Election Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <header>
+    <h1>Election Assistant</h1>
+    <nav id="main-nav">
+      <button data-target="home-view" class="active">Home</button>
+      <button data-target="eligibility-view">Am I Eligible?</button>
+      <button data-target="checklist-view">Checklist</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home View -->
+    <section id="home-view" class="view active-view">
+      <h2>Welcome to your Guide</h2>
+      <p>Use the navigation above to check your voting eligibility or build your voting day checklist. Your data remains completely offline and private.</p>
+    </section>
+
+    <!-- Eligibility Checker View -->
+    <section id="eligibility-view" class="view">
+      <h2>Eligibility Checker</h2>
+      <form id="eligibility-form">
+        <label>
+          Your Age:
+          <input type="number" id="age-input" min="1" max="120" required>
+        </label>
+        <label>
+          Are you a citizen?
+          <select id="citizen-input" required>
+            <option value="">Select...</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+        <button type="submit">Check Eligibility</button>
+      </form>
+      <div id="eligibility-result" aria-live="polite"></div>
+    </section>
+
+    <!-- Document Checklist View -->
+    <section id="checklist-view" class="view">
+      <h2>Document Checklist</h2>
+      <p>Select the documents you have prepared:</p>
+      <div class="checklist-container">
+        <label><input type="checkbox" data-doc="photo-id"> Government-issued Photo ID</label>
+        <label><input type="checkbox" data-doc="proof-address"> Proof of Address (Utility Bill, etc.)</label>
+        <label><input type="checkbox" data-doc="voter-card"> Voter Registration Card</label>
+      </div>
+      <p id="checklist-status"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

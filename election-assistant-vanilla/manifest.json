@@ -1,0 +1,8 @@
+{
+  "name": "Election Assistant",
+  "short_name": "ElectionApp",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FAFAFA",
+  "theme_color": "#004B87"
+}

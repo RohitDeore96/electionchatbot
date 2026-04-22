@@ -183,14 +183,36 @@
             input.value = '';
             messages.scrollTop = messages.scrollHeight;
 
-            // Mock bot reply
-            setTimeout(() => {
+            // Call Gemini API directly via REST for the standalone demo
+            const apiKey = "AIzaSyC8RzVCiSt6ga1MA8XPIwEn2oUMD90vNIk";
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
+            
+            fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    contents: [{
+                        parts: [{
+                            text: `You are an Election Assistant. Keep it strictly politically neutral. Answer the following: ${input.value}`
+                        }]
+                    }]
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
                 const botMsg = document.createElement('div');
                 botMsg.className = 'message bot-message';
-                botMsg.textContent = "I'm a demo assistant. In production, I connect to Gemini API to provide answers.";
+                botMsg.textContent = data.candidates && data.candidates[0] ? data.candidates[0].content.parts[0].text : "I couldn't process that.";
                 messages.appendChild(botMsg);
                 messages.scrollTop = messages.scrollHeight;
-            }, 1000);
+            })
+            .catch(err => {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'message bot-message';
+                botMsg.textContent = "Error connecting to AI. Check console.";
+                messages.appendChild(botMsg);
+                console.error(err);
+            });
         }
 
         function handleKeyPress(e) {

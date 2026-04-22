@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #004B87;
+  --secondary-color: #0072CE;
+  --bg-color: #FAFAFA;
+  --text-color: #111111;
+  --card-bg: #FFFFFF;
+  --success: #2E7D32;
+  --error: #C62828;
+  --border: #DDDDDD;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #FFF;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+nav button {
+  background: transparent;
+  color: #FFF;
+  border: 2px solid #FFF;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+nav button.active, nav button:hover, nav button:focus {
+  background: #FFF;
+  color: var(--primary-color);
+  outline: none;
+}
+
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.view {
+  display: none;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid var(--border);
+}
+
+.view.active-view {
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  gap: 0.3rem;
+}
+
+input[type="number"], select {
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background: var(--secondary-color);
+  color: #FFF;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+  background: var(--primary-color);
+}
+
+#eligibility-result {
+  margin-top: 1.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.checklist-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.checklist-container label {
+  flex-direction: row;
+  align-items: center;
+  font-weight: 400;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.checklist-container input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+#checklist-status {
+  font-weight: 600;
+  color: var(--secondary-color);
+}
