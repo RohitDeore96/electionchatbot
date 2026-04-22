@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+.git
+.env
+.env.*
+*.log
+.gitignore
+README.md
+LICENSE
+
+# Ignore the vanilla versions to keep the docker image light
+election-assistant-v2
+election-assistant-vanilla
