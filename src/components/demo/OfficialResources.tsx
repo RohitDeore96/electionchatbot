@@ -10,7 +10,7 @@ const OfficialResources = () => {
       
       <ul className="resource-links">
         <li>
-          <a href="#" onClick={(e) => e.preventDefault()}>National Election Commission Website ↗</a>
+          <a href="#" onClick={(e) => e.preventDefault()}>National Chess Commission Website ↗</a>
         </li>
         <li>
           <a href="#" onClick={(e) => e.preventDefault()}>Voter Portal & Forms Download ↗</a>

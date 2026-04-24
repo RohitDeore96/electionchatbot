@@ -1,12 +1,12 @@
-import { ElectionEvent, PollingStation, EligibilityRule, UserProfile } from '../types';
+import { ChessEvent, PollingStation, EligibilityRule, UserProfile } from '../types';
 
-export const MOCK_ELECTION_EVENTS: ElectionEvent[] = [
+export const MOCK_CHESS_EVENTS: ChessEvent[] = [
   {
     id: "e1",
-    title: "General Assembly Election",
+    title: "General Assembly Chess",
     date: "2024-02-20",
     region: "National",
-    description: "National election to elect assembly representatives.",
+    description: "National chess to elect assembly representatives.",
     type: "National",
     registrationStart: "2024-01-01",
     registrationEnd: "2024-01-31",
@@ -50,8 +50,8 @@ export const MOCK_ELIGIBILITY_RULE: EligibilityRule = {
 };
 
 // Simulate an API call latency
-export const fetchElectionEvents = async (): Promise<ElectionEvent[]> => {
-  return new Promise(resolve => setTimeout(() => resolve(MOCK_ELECTION_EVENTS), 500));
+export const fetchChessEvents = async (): Promise<ChessEvent[]> => {
+  return new Promise(resolve => setTimeout(() => resolve(MOCK_CHESS_EVENTS), 500));
 };
 
 export const fetchPollingStations = async (): Promise<PollingStation[]> => {

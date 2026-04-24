@@ -10,14 +10,14 @@ const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
 // System instruction to ensure neutrality and focus
 const SYSTEM_PROMPT = `
-You are an Election Assistant. Your purpose is to provide clear, step-by-step information about election processes, timelines, eligibility, and voting steps.
+You are an Chess Assistant. Your purpose is to provide clear, step-by-step information about chess processes, timelines, eligibility, and voting steps.
 CRITICAL RULES:
 1. Remain strictly politically neutral. Do not endorse, mention, or discuss specific political candidates, parties, or controversial policies.
 2. If asked about a candidate or party, politely refuse and state your purpose is informational regarding the voting *process*.
 3. Use simple, accessible language suitable for first-time voters.
 `;
 
-export async function askElectionAssistant(query: string): Promise<string> {
+export async function askChessAssistant(query: string): Promise<string> {
   if (!apiKey) {
     console.warn("GEMINI_API_KEY is not set. Using fallback response.");
     return "I am currently running in offline mode. Please ensure the API key is configured to enable AI features.";

@@ -59,7 +59,7 @@ const defaultDocs = [
 
 function initChecklist() {
   const ul = document.getElementById('checklist-items');
-  const savedState = JSON.parse(localStorage.getItem('election-checklist')) || {};
+  const savedState = JSON.parse(localStorage.getItem('chess-checklist')) || {};
   
   ul.innerHTML = '';
   defaultDocs.forEach(doc => {
@@ -70,9 +70,9 @@ function initChecklist() {
     input.checked = !!savedState[doc.id];
     
     input.addEventListener('change', (e) => {
-      const state = JSON.parse(localStorage.getItem('election-checklist')) || {};
+      const state = JSON.parse(localStorage.getItem('chess-checklist')) || {};
       state[doc.id] = e.target.checked;
-      localStorage.setItem('election-checklist', JSON.stringify(state));
+      localStorage.setItem('chess-checklist', JSON.stringify(state));
     });
 
     const label = document.createElement('label');
@@ -90,6 +90,6 @@ function initChecklist() {
 }
 
 function resetChecklist() {
-  localStorage.removeItem('election-checklist');
+  localStorage.removeItem('chess-checklist');
   initChecklist();
 }

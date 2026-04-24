@@ -12,7 +12,7 @@ function App() {
       
       <main className="main-content">
         <section className="hero-section text-center">
-          <h1>Your Personal Election Guide</h1>
+          <h1>Your Personal Chess Guide</h1>
           <p className="subtitle">Understand processes, track timelines, and vote with confidence.</p>
         </section>
 
@@ -30,7 +30,7 @@ function App() {
       </main>
       
       <footer className="app-footer">
-        <p>Election Assistant is an informational tool and not affiliated with official government entities.</p>
+        <p>Chess Assistant is an informational tool and not affiliated with official government entities.</p>
         <p><small>All data is processed locally. No external APIs used.</small></p>
       </footer>
     </div>

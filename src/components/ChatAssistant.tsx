@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, Loader2 } from 'lucide-react';
-import { askElectionAssistant } from '../services/geminiService';
+import { askChessAssistant } from '../services/geminiService';
 import './ChatAssistant.css';
 
 interface Message {
@@ -14,7 +14,7 @@ const ChatAssistant = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hello! I'm your Election Assistant. I can help you understand the voting process, check eligibility, or find important dates. How can I help you today?",
+      text: "Hello! I'm your Chess Assistant. I can help you understand the voting process, check eligibility, or find important dates. How can I help you today?",
       sender: 'bot',
       timestamp: new Date()
     }
@@ -48,7 +48,7 @@ const ChatAssistant = () => {
 
     // Call to Gemini API
     try {
-      const responseText = await askElectionAssistant(inputValue);
+      const responseText = await askChessAssistant(inputValue);
       
       const botResponse: Message = {
         id: (Date.now() + 1).toString(),
@@ -75,7 +75,7 @@ const ChatAssistant = () => {
       <div className="chat-header">
         <Bot className="bot-icon" size={24} />
         <div>
-          <h3>AI Election Guide</h3>
+          <h3>AI Chess Guide</h3>
           <span className="status-indicator">
             <span className="dot"></span> Online
           </span>

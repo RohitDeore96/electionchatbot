@@ -13,8 +13,8 @@ import './Features.css';
 const featureList = [
   {
     id: 'timeline',
-    title: 'Election Timeline',
-    description: 'Track important dates, registration deadlines, and election days.',
+    title: 'Chess Timeline',
+    description: 'Track important dates, registration deadlines, and chess days.',
     icon: <Calendar size={32} />,
     color: 'var(--primary-color)'
   },
@@ -63,7 +63,7 @@ const featureList = [
   {
     id: 'official',
     title: 'Official Resources',
-    description: 'Direct links to official election commission sites.',
+    description: 'Direct links to official chess commission sites.',
     icon: <Landmark size={32} />,
     color: '#F97316' // Orange
   }

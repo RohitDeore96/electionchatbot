@@ -3,9 +3,9 @@
 
 const firebaseConfig = {
   apiKey: "AIzaSyMockApiKey1234567890",
-  authDomain: "election-assistant-mock.firebaseapp.com",
-  projectId: "election-assistant-mock",
-  storageBucket: "election-assistant-mock.appspot.com",
+  authDomain: "chess-assistant-mock.firebaseapp.com",
+  projectId: "chess-assistant-mock",
+  storageBucket: "chess-assistant-mock.appspot.com",
   messagingSenderId: "123456789012",
   appId: "1:123456789012:web:mock123abc456def"
 };

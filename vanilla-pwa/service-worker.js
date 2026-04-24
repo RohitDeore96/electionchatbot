@@ -1,4 +1,4 @@
-const CACHE_NAME = 'election-assistant-v1';
+const CACHE_NAME = 'chess-assistant-v1';
 const ASSETS = [
   '/',
   '/index.html',

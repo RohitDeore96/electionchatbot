@@ -10,7 +10,7 @@ export interface UserProfile {
   };
 }
 
-export interface ElectionEvent {
+export interface ChessEvent {
   id: string;
   title: string;
   date: string; // ISO format or timestamp

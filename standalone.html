@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Election Assistant (Standalone)</title>
+    <title>Chess Assistant (Standalone)</title>
     <style>
         /* Embedding the styles for standalone rendering since npm is missing */
         :root {
@@ -145,14 +145,14 @@
 
     <main class="main">
         <div class="hero">
-            <h1>Your Personal Election Guide</h1>
+            <h1>Your Personal Chess Guide</h1>
             <p style="color:var(--text-secondary)">Understand processes, track timelines, and vote with confidence.</p>
         </div>
 
         <div class="chat-box">
-            <div class="chat-header">🤖 AI Election Assistant</div>
+            <div class="chat-header">🤖 AI Chess Assistant</div>
             <div class="chat-messages" id="messages">
-                <div class="message bot-message">Hello! I'm your Election Assistant. How can I help you today?</div>
+                <div class="message bot-message">Hello! I'm your Chess Assistant. How can I help you today?</div>
             </div>
             <div class="chat-input-area">
                 <input type="text" id="chatInput" placeholder="Ask about voting..." onkeypress="handleKeyPress(event)">
@@ -161,7 +161,7 @@
         </div>
 
         <div class="features-grid">
-            <div class="feature-card">📅<br>Election Timeline</div>
+            <div class="feature-card">📅<br>Chess Timeline</div>
             <div class="feature-card">📍<br>Polling Stations</div>
             <div class="feature-card">✅<br>Eligibility Checker</div>
             <div class="feature-card">📖<br>Voting Guide</div>
@@ -193,7 +193,7 @@
                 body: JSON.stringify({
                     contents: [{
                         parts: [{
-                            text: `You are an Election Assistant. Keep it strictly politically neutral. Answer the following: ${input.value}`
+                            text: `You are an Chess Assistant. Keep it strictly politically neutral. Answer the following: ${input.value}`
                         }]
                     }]
                 })

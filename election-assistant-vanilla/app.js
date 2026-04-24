@@ -67,7 +67,7 @@ function initChecklist() {
   const status = document.getElementById('checklist-status');
   
   // Load local state
-  const savedDocs = JSON.parse(localStorage.getItem('election-docs') || '{}');
+  const savedDocs = JSON.parse(localStorage.getItem('chess-docs') || '{}');
 
   checkboxes.forEach(cb => {
     const docId = cb.getAttribute('data-doc');
@@ -80,7 +80,7 @@ function initChecklist() {
     // Save state on change
     cb.addEventListener('change', () => {
       savedDocs[docId] = cb.checked;
-      localStorage.setItem('election-docs', JSON.stringify(savedDocs));
+      localStorage.setItem('chess-docs', JSON.stringify(savedDocs));
       updateChecklistStatus(checkboxes, status);
     });
   });

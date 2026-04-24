@@ -13,7 +13,7 @@ const DocumentChecklist = () => {
 
   // Load from local storage
   useEffect(() => {
-    const saved = localStorage.getItem('election-docs');
+    const saved = localStorage.getItem('chess-docs');
     if (saved) {
       setDocs(JSON.parse(saved));
     }
@@ -22,12 +22,12 @@ const DocumentChecklist = () => {
   const toggleCheck = (id: string) => {
     const updated = docs.map(d => d.id === id ? { ...d, checked: !d.checked } : d);
     setDocs(updated);
-    localStorage.setItem('election-docs', JSON.stringify(updated));
+    localStorage.setItem('chess-docs', JSON.stringify(updated));
   };
 
   const resetList = () => {
     setDocs(DEFAULT_DOCS);
-    localStorage.removeItem('election-docs');
+    localStorage.removeItem('chess-docs');
   };
 
   return (

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'election-assistant-cache-v1';
+const CACHE_NAME = 'chess-assistant-cache-v1';
 
 // Assets to strictly cache for offline execution
 const ASSETS = [
